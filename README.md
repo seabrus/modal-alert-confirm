@@ -16,12 +16,16 @@ Add somewhere in your template:
 
 Then call the function `ModalAlertConfirm` in the javascript code on the client:
 ```javascript
-ModalAlertConfirm(alertText, alertType, [callbackYes], [callbackNo]);
+import ModalAlertConfirm from "meteor/seabrus:modal-alert-confirm";
+...
+  ModalAlertConfirm(alertText, alertType, [callbackYes], [callbackNo]);
 ```
 
 - The argument `alertText` should be a string that represents the alert or confirm dialog message;
 - `alertType` can be `"alert"` or `"confirm"`;
 - The optional arguments `callbackYes` and `callbackNo` are functions which should be called if user's response will be `OK/Yes` or `No` respectively.
+
+Note: Don't forget to import `ModalAlertConfirm` from `meteor/seabrus:modal-alert-confirm`.
 
 ### Example
 Here is an example:
