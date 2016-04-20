@@ -30,6 +30,10 @@ Note: Don't forget to import `ModalAlertConfirm` from `meteor/seabrus:modal-aler
 ### Example
 Here is an example:
 ```javascript
+import ModalAlertConfirm from "meteor/seabrus:modal-alert-confirm";
+
+  ...
+
   ModalAlertConfirm('Are you sure?', 'confirm', function () {
     Collection1.remove({ '_id': docId });
   });
