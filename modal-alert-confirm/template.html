@@ -1,0 +1,49 @@
+<template name="modalAlertConfirm">
+
+  <div id="modal-alert" class="modal modal-alert-confirm-window">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <div class="modal-title">
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <div role="alert"
+                  class="alert alert-warning modal-alert-confirm-text-container">
+                <p id="modal-alert-text"
+                  class="modal-alert-confirm-text">
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          {{#if isAlert}}
+          <div class="text-center">
+            <button class="btn btn-info modal-alert-confirm-button" data-dismiss="modal">
+              OK
+            </button>
+          </div>
+          {{/if}}
+          {{#if isConfirm}}
+          <div class="text-center">
+            <button class="btn btn-info modal-alert-confirm-button js-yes">
+              Yes
+            </button>
+            <button class="btn btn-default modal-alert-confirm-button js-no">
+              No
+            </button>
+          </div>
+          {{/if}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</template>

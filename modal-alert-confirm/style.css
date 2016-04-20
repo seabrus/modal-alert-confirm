@@ -1,0 +1,16 @@
+.modal-alert-confirm-window {
+  border-radius: 10px;
+}
+
+.modal-alert-confirm-text-container {
+  margin-bottom: 0px;
+}
+
+.modal-alert-confirm-text {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.modal-alert-confirm-button {
+  font-size: 1.25em;
+}
