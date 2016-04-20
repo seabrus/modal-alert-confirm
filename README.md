@@ -20,7 +20,7 @@ ModalAlertConfirm(alertText, alertType, [callbackYes], [callbackNo]);
 ```
 
 - The argument `alertText` should be a string that represents the alert or confirm dialog message;
-- `alertType` can be `alert` or `confirm`;
+- `alertType` can be `"alert"` or `"confirm"`;
 - The optional arguments `callbackYes` and `callbackNo` are functions which should be called if user's response will be `OK/Yes` or `No` respectively.
 
 ### Example
