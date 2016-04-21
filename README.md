@@ -27,7 +27,7 @@ import ModalAlertConfirm from "meteor/seabrus:modal-alert-confirm";
 - `alertType` can be `"alert"` or `"confirm"`;
 - The optional arguments `callbackYes` and `callbackNo` are functions which should be called if user's response will be `OK/Yes` or `No` respectively.
 
-**Note**: Don't forget to import `ModalAlertConfirm` from `"meteor/seabrus:modal-alert-confirm"`. `ModalAlertConfirm` is a default export value, therefore don't use curly braces.
+**Note**: Don't forget to import `ModalAlertConfirm` from `"meteor/seabrus:modal-alert-confirm"`. `ModalAlertConfirm` is defined as a default export value, therefore don't use curly braces.
 
 ### Example
 Here is an example:
@@ -43,9 +43,9 @@ import ModalAlertConfirm from "meteor/seabrus:modal-alert-confirm";
 
 ### Styles
 The modal dialog in this package is built on the basis of Bootstrap modals. Additional CSS classes that help to design the look and feel of the dialog window are as follows:
- - `modal-alert-confirm-window` - the dialog window
- - `modal-alert-confirm-text-container` - a container for the dialog message
- - `modal-alert-confirm-text` - text of the dialog message
+ - `modal-alert-confirm-window` - the dialog window style
+ - `modal-alert-confirm-text-container` - the style of container for the dialog message
+ - `modal-alert-confirm-text` - the style of the dialog message text
  - `modal-alert-confirm-button` - the style of "OK" / "Yes" and "No" buttons
 
 Initially these classes are defined as
