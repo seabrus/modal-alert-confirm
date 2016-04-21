@@ -17,7 +17,9 @@ Add somewhere in your template:
 Then call the function `ModalAlertConfirm` in the javascript code on the client:
 ```javascript
 import ModalAlertConfirm from "meteor/seabrus:modal-alert-confirm";
-...
+
+  ...
+
   ModalAlertConfirm(alertText, alertType, [callbackYes], [callbackNo]);
 ```
 
@@ -25,7 +27,7 @@ import ModalAlertConfirm from "meteor/seabrus:modal-alert-confirm";
 - `alertType` can be `"alert"` or `"confirm"`;
 - The optional arguments `callbackYes` and `callbackNo` are functions which should be called if user's response will be `OK/Yes` or `No` respectively.
 
-Note: Don't forget to import `ModalAlertConfirm` from `meteor/seabrus:modal-alert-confirm`.
+**Note**: Don't forget to import `ModalAlertConfirm` from `"meteor/seabrus:modal-alert-confirm"`. `ModalAlertConfirm` is a default export value, therefore don't use curly braces.
 
 ### Example
 Here is an example:
@@ -37,6 +39,33 @@ import ModalAlertConfirm from "meteor/seabrus:modal-alert-confirm";
   ModalAlertConfirm('Are you sure?', 'confirm', function () {
     Collection1.remove({ '_id': docId });
   });
+```
+
+### Styles
+The modal dialog in this package is built on the basis of Bootstrap modals. Additional CSS classes that help to design the look and feel of the dialog window are as follows:
+ - `modal-alert-confirm-window` - the dialog window
+ - `modal-alert-confirm-text-container` - a container for the dialog message
+ - `modal-alert-confirm-text` - text of the dialog message
+ - `modal-alert-confirm-button` - the style of "OK" / "Yes" and "No" buttons
+
+Initially these classes are defined as
+```css
+.modal-alert-confirm-window {
+  border-radius: 10px;
+}
+
+.modal-alert-confirm-text-container {
+  margin-bottom: 0px;
+}
+
+.modal-alert-confirm-text {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.modal-alert-confirm-button {
+  font-size: 1.25em;
+}
 ```
 
 ### License

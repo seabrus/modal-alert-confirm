@@ -70,24 +70,22 @@ function ModalAlertConfirm(alertText, alertType, callbackYes, callbackNo) {
 
   Tracker.autorun(function (c) {
     if (responseRVar.get() === 'yes') {
+      c.stop();
       if (typeof callbackYes === 'function') {
         callbackYes();
       }
-
-      c.stop();
     }
 
     if (responseRVar.get() === 'no') {
+      c.stop();
       if (typeof callbackNo === 'function') {
         callbackNo();
       }
-
-      c.stop();
     }
   }); // end of "instance.autorun..."
 
 
-  $("#modal-alert").modal({
+  $('#modal-alert').modal({
     backdrop: 'static',
     keyboard: false,
     show: true,
